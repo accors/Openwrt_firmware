@@ -78,7 +78,7 @@ jobs:
       run: cd openwrt && ./scripts/feeds update -a
       
     - name: Remove duplicate
-      run: cd openwrt && sed -i 's/mosdns_neo/mosdns/g' package/feeds/kenzo/luci-app-mosdns/Makefile
+      run: cd openwrt && sed -i 's/mosdns-neo/mosdns/g' package/feeds/kenzo/luci-app-mosdns/Makefile && sed -i 's/mosdns-neo/mosdns/g' ./feeds/kenzo/mosdns/Makefile
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
