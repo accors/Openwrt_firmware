@@ -5,6 +5,9 @@
 # Author: P3TERX
 # Blog: https://p3terx.com
 #=================================================
+# Add luci-app-mosdns
+git clone https://github.com/sbwml/luci-app-mosdns package/mosdns
+
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 
