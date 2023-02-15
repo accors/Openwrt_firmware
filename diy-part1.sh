@@ -16,3 +16,7 @@
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+
+# fix qca-nss-clients-64
+rm /workdir/openwrt/package/qca/nss/qca-nss-clients-64/Makefile
+wget -P /workdir/openwrt/package/qca/nss/qca-nss-clients-64 https://raw.githubusercontent.com/coolsnowwolf/lede/4ae038fae6c13f5ef334dc306a8e3cda615299ac/package/qca/nss/qca-nss-clients-64/Makefile
